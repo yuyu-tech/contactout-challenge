@@ -55,7 +55,7 @@ class User extends Authenticatable
     {
         $enrolledReferralsCount = $this->referrals()->where('status', 3)->count();
 
-        return $enrolledReferralsCount > 0 ? 10 : $enrolledReferralsCount;
+        return $enrolledReferralsCount > 10 ? 10 : $enrolledReferralsCount;
     }
     /**
      * Get First Name
@@ -68,5 +68,16 @@ class User extends Authenticatable
         }
 
         return implode(' ', $arrName);
+    }
+
+
+    /**
+     * Can access filament
+     *
+     * Only organization's employees are allowed to access filament.
+     */
+    public function canAccessFilament(): bool
+    {
+        return str_ends_with($this->email, '@contactout.com') && $this->hasVerifiedEmail();
     }
 }

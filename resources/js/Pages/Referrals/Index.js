@@ -27,6 +27,8 @@ const Dashboard = () => {
         e.preventDefault();
 
         post(route("referrals.store"));
+
+        setData("emails", []);
     };
 
     /**

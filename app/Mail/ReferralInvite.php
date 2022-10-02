@@ -39,6 +39,12 @@ class ReferralInvite extends Mailable
     {
         $referredBy = $this->referral->referredBy;
 
+        /**
+         * Update status of referral
+         */
+        $this->referral->status = 2;
+        $this->referral->save();
+
         return $this->subject($referredBy->first_name .' recommends ' .config('app.name'))
                 ->markdown('emails.referral.invite', [
                     'firstName' => $referredBy->first_name,
