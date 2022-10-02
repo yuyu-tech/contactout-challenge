@@ -17,8 +17,7 @@ class CreateReferralsTable extends Migration
             $table->id();
             $table->string('email', 255)->unique();
             $table->foreignId('referred_by')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->tinyInteger('status');
-            $table->tinyInteger('notified');
+            $table->tinyInteger('status')->default(1);
             $table->foreignId('user_id')->nullable()->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

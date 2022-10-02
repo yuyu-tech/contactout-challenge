@@ -9,10 +9,21 @@ class Referral extends Model
 {
     use HasFactory;
 
+    /**
+     * Referral's Statuses
+     */
     public static $status = [
         1 => 'Pending',
-        2 => 'Notified',
-        3 => 'Created'
+        2 => 'Invitation Sent',
+        3 => 'Enrolled'
+    ];
+
+    /**
+     * Fillable entities
+     */
+    protected $fillable = [
+        'email',
+        'status'
     ];
 
     /**

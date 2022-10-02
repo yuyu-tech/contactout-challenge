@@ -2,9 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -37,9 +38,16 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'auth' => [
                 'user' => $request->user(),
+                'referral_link' => $request->user() ? route('register', ['code' => Crypt::encryptString($request->user()->email)]) : null,
             ],
             'ziggy' => function () {
                 return (new Ziggy)->toArray();
+            },
+            'flash' => function () use ($request) {
+                return [
+                    'success' => $request->session()->get('success'),
+                    'error' => $request->session()->get('error'),
+                ];
             },
         ]);
     }

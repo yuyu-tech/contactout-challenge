@@ -18,19 +18,26 @@ use App\Filament\Resources\ReferralResource\RelationManagers;
 
 class ReferralResource extends Resource
 {
+    /**
+     * Resource Model
+     *
+     * @var string
+     */
     protected static ?string $model = Referral::class;
 
+    /**
+     * Navigation Icon
+     *
+     * @var string
+     */
     protected static ?string $navigationIcon = 'heroicon-s-user-add';
 
-
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                //
-            ]);
-    }
-
+    /**
+     * table configuration
+     *
+     * @param Table $table
+     * @return Table
+     */
     public static function table(Table $table): Table
     {
         return $table
@@ -53,19 +60,15 @@ class ReferralResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
+    /**
+     * Get pages
+     *
+     * @return array
+     */
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListReferrals::route('/'),
-            // 'create' => Pages\CreateReferral::route('/create'),
-            // 'edit' => Pages\EditReferral::route('/{record}/edit'),
         ];
     }
 }

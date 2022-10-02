@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Components */
+@import "components/button";
+@import "components/form";
+
+@import "react-multi-email/style.css";
+
+.react-multi-email > input:focus {
+    box-shadow: none;
+    width: 100% !important;
+    display: inline-block !important;
+}

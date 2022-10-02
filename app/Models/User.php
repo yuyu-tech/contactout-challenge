@@ -40,4 +40,33 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the referrals for the user.
+     */
+    public function referrals() {
+        return $this->hasMany(Referral::class, 'referred_by');
+    }
+
+    /**
+     * Get Referral Points
+     */
+    public function getReferralPointsAttribute()
+    {
+        $enrolledReferralsCount = $this->referrals()->where('status', 3)->count();
+
+        return $enrolledReferralsCount > 0 ? 10 : $enrolledReferralsCount;
+    }
+    /**
+     * Get First Name
+     */
+    public function getFirstNameAttribute() {
+        $arrName = explode(' ', $this->name);
+
+        if(count($arrName) > 0) {
+            array_pop($arrName);
+        }
+
+        return implode(' ', $arrName);
+    }
 }
