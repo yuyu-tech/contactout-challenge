@@ -7,7 +7,7 @@ Follow below steps to setup a project.
 
     # Install composer & node dependencies.
     npm i
-    composer i
+    composer install
 
     # copy .env.example and create .env file
 
@@ -20,7 +20,7 @@ Follow below steps to setup a project.
 # Tutorial video
 
 -   Functionality - [https://drive.google.com/file/d/1vJVW0C_Dqzjzfu-ZFO2RDAPbn4irGpUb/view](https://drive.google.com/file/d/1vJVW0C_Dqzjzfu-ZFO2RDAPbn4irGpUb/view)
--   Code Explaination - []()
+-   Code Explaination - [https://drive.google.com/file/d/1E3CzX1ivK2V_C-QRVyuWN4dMVS6sUUvE/view?usp=sharing](https://drive.google.com/file/d/1E3CzX1ivK2V_C-QRVyuWN4dMVS6sUUvE/view?usp=sharing)
 
 ### Referral Module
 
