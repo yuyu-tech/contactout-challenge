@@ -22,19 +22,9 @@ Follow below steps to setup a project.
 -   Functionality - [https://drive.google.com/file/d/1vJVW0C_Dqzjzfu-ZFO2RDAPbn4irGpUb/view](https://drive.google.com/file/d/1vJVW0C_Dqzjzfu-ZFO2RDAPbn4irGpUb/view)
 -   Code Explaination - []()
 
-# Referral Module
+### Referral Module
 
--   Frontend
-
-![Image-1](https://drive.google.com/file/d/1-nqvmBpybU2ILjMS9L80Vj_L_v9Z3Yd5/view?usp=sharing)
-
-![Image-2](https://drive.google.com/file/d/1loOiQCO0YyEdhzB3dXcdJM77hz2edlrD/view?usp=sharing)
-
--   Admin
-
-![Image-1](https://drive.google.com/file/d/10LQA6sUBeZTGSuMkcbNwUT-YotZraEK0/view?usp=sharing)
-
-![Image-2](https://drive.google.com/file/d/1isl2qT104RAvuimxe7KDiakSCcFFJWHP/view?usp=sharing)
+[Click here](https://imgur.com/a/VPjbMM4) to view screenshots.
 
 # References:
 
